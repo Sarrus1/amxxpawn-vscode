@@ -1,0 +1,296 @@
+{
+  "name": "amxxpawn-vscode",
+  "displayName": "AMXXPawn vscode",
+  "description": "AMXXPawn highlighting, autocompletion and much more",
+  "version": "0.1.0",
+  "publisher": "Sarrus",
+  "main": "./dist/index.js",
+  "icon": "amxmodx.png",
+  "homepage": "https://github.com/Sarrus1/amxxpawn-vscode/wiki",
+  "bugs": {
+    "url": "https://github.com/Sarrus1/amxxpawn-vscode/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sarrus1/amxxpawn-vscode.git"
+  },
+  "sponsor": {
+    "url": "https://www.buymeacoffee.com/sarrus"
+  },
+  "engines": {
+    "vscode": "^1.73.1"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets",
+    "Linters",
+    "Formatters"
+  ],
+  "keywords": [
+    "AMXXPawn",
+    "AMXModx",
+    "AlliedMods",
+    "AlliedModders",
+    "multi-root ready"
+  ],
+  "activationEvents": [
+    "onLanguage:amxxpawn",
+    "onLanguage:valve-kv",
+    "onLanguage:valve-cfg"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "amxxpawn-vscode.installLanguageServer",
+        "title": "Install Language Server"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "AMXXPawn configuration",
+      "properties": {
+        "AMXXPawnLanguageServer.mainPath": {
+          "type": "string",
+          "description": "The location of the main .sma file, which allows the linter and the compiler to work correctly. You should use this setting per workspace.",
+          "scope": "resource"
+        },
+        "AMXXPawnLanguageServer.includesDirectories": {
+          "type": "array",
+          "default": [],
+          "description": "Include folders paths for the compiler and the linter.",
+          "scope": "resource"
+        },
+        "amxxpawn.formatterSettings": {
+          "type": "array",
+          "default": [
+            "AlignAfterOpenBracket: Align",
+            "AlignArrayOfStructures: Left",
+            "AlignConsecutiveAssignments: AcrossEmptyLinesAndComments",
+            "AlignConsecutiveBitFields: AcrossEmptyLinesAndComments",
+            "AlignConsecutiveDeclarations: AcrossEmptyLinesAndComments",
+            "AlignConsecutiveMacros: AcrossEmptyLinesAndComments",
+            "AlignEscapedNewlines: Left",
+            "AlignOperands: AlignAfterOperator",
+            "AlignTrailingComments: true",
+            "AllowAllArgumentsOnNextLine: true",
+            "AllowAllConstructorInitializersOnNextLine: true",
+            "AllowAllParametersOfDeclarationOnNextLine: true",
+            "AllowShortBlocksOnASingleLine: Always",
+            "AllowShortCaseLabelsOnASingleLine: true",
+            "AllowShortEnumsOnASingleLine: true",
+            "AllowShortFunctionsOnASingleLine: All",
+            "AllowShortIfStatementsOnASingleLine: AllIfsAndElse",
+            "AllowShortLambdasOnASingleLine: All",
+            "AllowShortLoopsOnASingleLine: false",
+            "AlwaysBreakAfterDefinitionReturnType: None",
+            "AlwaysBreakAfterReturnType: None",
+            "AlwaysBreakBeforeMultilineStrings: false",
+            "AlwaysBreakTemplateDeclarations: No",
+            "BasedOnStyle: Google",
+            "BinPackArguments: true",
+            "BinPackParameters: true",
+            "BreakBeforeBinaryOperators: NonAssignment",
+            "BreakBeforeBraces: Custom",
+            "BraceWrapping: { AfterCaseLabel: true",
+            "AfterClass: true",
+            "AfterControlStatement: Always",
+            "AfterEnum: true",
+            "AfterExternBlock: true",
+            "AfterFunction: true",
+            "AfterNamespace: true",
+            "AfterObjCDeclaration: false",
+            "AfterStruct: true",
+            "AfterUnion: true",
+            "BeforeCatch: true",
+            "BeforeElse: true",
+            "BeforeLambdaBody: true",
+            "BeforeWhile: true",
+            "IndentBraces: false",
+            "SplitEmptyFunction: false",
+            "SplitEmptyNamespace: false",
+            "SplitEmptyRecord: false }",
+            "BreakBeforeConceptDeclarations: false",
+            "BreakBeforeTernaryOperators: true",
+            "BreakConstructorInitializers: AfterColon",
+            "BreakInheritanceList: AfterComma",
+            "BreakStringLiterals: false",
+            "ColumnLimit: 0",
+            "CompactNamespaces: true",
+            "ConstructorInitializerAllOnOneLineOrOnePerLine: true",
+            "ConstructorInitializerIndentWidth: ${TabSize}",
+            "ContinuationIndentWidth: ${TabSize}",
+            "Cpp11BracedListStyle: false",
+            "EmptyLineBeforeAccessModifier: LogicalBlock",
+            "FixNamespaceComments: true",
+            "IncludeBlocks: Preserve",
+            "IndentAccessModifiers: false",
+            "IndentCaseBlocks: false",
+            "IndentCaseLabels: true",
+            "IndentExternBlock: Indent",
+            "IndentGotoLabels: false",
+            "IndentPPDirectives: BeforeHash",
+            "IndentRequires: true",
+            "IndentWidth: ${TabSize}",
+            "IndentWrappedFunctionNames: true",
+            "LambdaBodyIndentation: OuterScope",
+            "Language: Cpp",
+            "MaxEmptyLinesToKeep: 1",
+            "NamespaceIndentation: All",
+            "ObjCBinPackProtocolList: Always",
+            "ObjCBreakBeforeNestedBlockParam: false",
+            "ObjCSpaceBeforeProtocolList: false",
+            "ReflowComments: true",
+            "SortIncludes: Never",
+            "SpaceAfterCStyleCast: false",
+            "SpaceAfterLogicalNot: false",
+            "SpaceBeforeAssignmentOperators: true",
+            "SpaceBeforeCaseColon: false",
+            "SpaceBeforeCpp11BracedList: false",
+            "SpaceBeforeCtorInitializerColon: true",
+            "SpaceBeforeInheritanceColon: true",
+            "SpaceBeforeParens: ControlStatementsExceptControlMacros",
+            "SpaceBeforeRangeBasedForLoopColon: true",
+            "SpaceBeforeSquareBrackets: false",
+            "SpaceInEmptyBlock: false",
+            "SpaceInEmptyParentheses: false",
+            "SpacesBeforeTrailingComments: ${TabSize}",
+            "SpacesInConditionalStatement: false",
+            "SpacesInContainerLiterals: true",
+            "SpacesInCStyleCastParentheses: false",
+            "SpacesInParentheses: false",
+            "SpacesInSquareBrackets: false",
+            "Standard: Auto",
+            "TabWidth: ${TabSize}",
+            "UseTab: Always",
+            "CommentPragmas: '^#define|#tryinclude'"
+          ],
+          "description": "Settings for the formatter. Any setting supported by Clang Format can be used here.",
+          "scope": "resource"
+        }
+      }
+    },
+    "configurationDefaults": {
+      "editor.semanticHighlighting.enabled": true
+    },
+    "iconThemes": [
+      {
+        "id": "amxxpawn",
+        "label": "AMXXPpawn",
+        "path": "./fileicons/amxxpawn-icon-theme.json"
+      }
+    ],
+    "languages": [
+      {
+        "id": "amxxpawn",
+        "aliases": [
+          "AMXXPpawn",
+          "amxxpawn"
+        ],
+        "extensions": [
+          ".sma",
+          ".inc"
+        ],
+        "configuration": "./LanguageConfigurations/AMXXPawnConfiguration.language-configuration.json"
+      },
+      {
+        "id": "valve-kv",
+        "aliases": [
+          "Valve KeyValue"
+        ],
+        "extensions": [
+          ".phrases.txt",
+          ".games.txt",
+          ".kv"
+        ],
+        "configuration": "./LanguageConfigurations/ValveKVConfiguration.language-configuration.json"
+      },
+      {
+        "id": "valve-cfg",
+        "aliases": [
+          "Valve CFG",
+          "CFG"
+        ],
+        "extensions": [
+          ".cfg"
+        ],
+        "configuration": "./LanguageConfigurations/ValveCFGConfiguration.language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "amxxpawn",
+        "scopeName": "source.amxxpawn",
+        "path": "./syntaxes/amxxpawn.tmLanguage.json"
+      },
+      {
+        "scopeName": "amxxpawn-jsdoc.injection",
+        "injectTo": [
+          "source.amxxpawn"
+        ],
+        "path": "./syntaxes/amxxpawn-jsdoc.json"
+      },
+      {
+        "language": "valve-kv",
+        "scopeName": "text.valve-kv",
+        "path": "./syntaxes/valve-kv.tmLanguage.json"
+      },
+      {
+        "language": "valve-cfg",
+        "scopeName": "text.valve-cfg",
+        "path": "./syntaxes/valve-cfg.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "amxxpawn",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  },
+  "dependencies": {
+    "axios": "^1.2.6",
+    "decompress": "^4.2.1",
+    "ftp-deploy": "^2.4.2",
+    "glob": "^7.2.0",
+    "rcon-srcds": "^2.0.1",
+    "safe-evaluate-expression": "^1.7.2",
+    "unzipper": "^0.10.11",
+    "vscode-languageclient": "^8.0.2",
+    "vscode-uri": "^3.0.3",
+    "wget-improved": "^3.2.1"
+  },
+  "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.2",
+    "@types/glob": "^7.2.0",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^14.14.0",
+    "@types/unzipper": "^0.10.5",
+    "@types/vscode": "^1.73.1",
+    "@vscode/test-electron": "^1.6.1",
+    "esbuild": "^0.14.43",
+    "mocha": "^10.0.0",
+    "node-loader": "2.0.0",
+    "nyc": "^15.1.0",
+    "ovsx": "^0.8.0",
+    "peggy": "^1.2.0",
+    "ts-loader": "^9.2.6",
+    "ts-pegjs": "^1.2.1",
+    "typescript": "^4.5.4",
+    "vsce": "^2.15.0"
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run build",
+    "generate-parser": "peggy --plugin ./node_modules/ts-pegjs --extra-options-file src/Keyvalues/kvconfig.json -o src/Keyvalues/kvParser.ts --cache src/Keyvalues/kv.pegjs",
+    "pretest": "npm run compile",
+    "test": "node ./dist/test/runTest.js",
+    "build": "node esbuild.js prod",
+    "compile": "npm run build && tsc -b tsconfig.json",
+    "watch": "node esbuild.js watch"
+  },
+  "__metadata": {
+    "id": "217597eb-5e7a-45ee-a236-5456c0f90948",
+    "publisherDisplayName": "Sarrus",
+    "publisherId": "ace08d21-1e01-422f-822b-c4f6145e6d5f",
+    "isPreReleaseVersion": false
+  }
+}

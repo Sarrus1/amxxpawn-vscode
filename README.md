@@ -1,4 +1,8 @@
 <div align="center">
+  <h1>DEVELOPMENT WAS MOVED TO <a href="https://github.com/Sarrus1/sourcepawn-vscode/">A MONO REPO.</a></h1>
+</div>
+
+<div align="center">
   <h1>AMXXPawn for VSCode</h1>
   <p>
     <strong>AMXXPawn highlighting and autocompletion for Visual Studio Code.
